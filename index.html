@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+h1{
+    text-align: center;
+    color: white;
+    background-color: crimson;
+    padding:'20px'
+}
+.age{
+    width:40%;
+    padding:20px;
+    margin:auto;
+    border-radius: 15px;
+    border:2px solid gray;
+    box-shadow: 5px 10px #888888;
+}
+.rep{
+    width:40%;
+    height:100%;
+    padding:20px;
+    margin-top: 50px;
+    margin-left: 440px;
+    border-radius: 15px;
+    border:2px solid gray;
+    box-shadow: 5px 10px #888888;
+}
+    </style>
+</head>
+<body>
+    <h1>Welcome To Logistic Regresssion    </h1>
+    <div class="age">
+        <label>Enter your Name: </label>
+        <br><br>
+        <input id="name" style="width: 250px;height: 30px; border-radius: 15px;"><br><br>
+        <label>Enter your Age : </label>
+        <br><br>
+        <input id="age" type="number"  style="width: 250px;height: 30px; border-radius: 15px;"><br><br>
+        <label>Enter your Sex : </label>
+       <br><br>
+        <input id="sex"  style="width: 250px;height: 30px; border-radius: 15px;" ><br><br>
+       
+       <button onclick="verify()" style="background-color: crimson; color:white;width: 150px;height: 50px; border-radius: 15px;margin-left: 220px;">submit</button>
+      
+    </div>
+    <div class="rep">
+        <h2 >REPORT:</h2>
+    <h3 id="demo" style="text-align: center;"></h3>
+</div>
+    <script>
+        function verify(){
+            var no;
+            no=Number(document.getElementById("age").value)
+           
+        if(no>66){
+            greeting="ok cp:0 , trestbps:146 , chol:174, fbs:0 , restecg:1 , thalach:125 , exang:1 , oldpeak:2.6 , slope:0 , ca:0 , thal:3 ,target:0";
+           
+        }
+        else if(no<=65 & no>=60){
+            greeting="ok cp:0 , trestbps:138 , chol:293, fbs:1 , restecg:1 , thalach:106 , exang:0 , oldpeak:1.9 , slope:1 , ca:3 , thal:2 ,target:0";
+        }
+        else if(no<=59 & no>=55){
+            greeting="ok cp:0 , trestbps:130 , chol:11, fbs:0 , restecg:1 , thalach:118 , exang:1 , oldpeak:1.2 , slope:1 , ca:1 , thal:3 ,target:0";
+        }
+        else if(no<=54 & no>=49){
+            greeting=" ok  cp:0 , trestbps:125 , chol:212, fbs:0 , restecg:1 , thalach:168 , exang:0 , oldpeak:1 , slope:2 , ca:2 , thal:3 ,target:0";
+        }
+        else if(no<=48 & no>=44){
+            greeting="ok cp:0 , trestbps:105 , chol:208, fbs:0 , restecg:0 , thalach:148 , exang:1 , oldpeak:3 , slope:1 , ca:0 , thal:2 ,target:1";
+        }
+        else if(no<=43 & no>=38){
+            greeting="ok cp:2 , trestbps:120 , chol:209, fbs:0 , restecg:1 , thalach:173 , exang:0 , oldpeak:1 , slope:0 , ca:2 , thal:1 ,target:0";
+        }
+        else if(no<=37 & no>=31){
+            greeting="ok cp:1 , trestbps:118 , chol:210, fbs:0 , restecg:1 , thalach:192 , exang:0 , oldpeak:0.7 , slope:2 , ca:0 , thal:2 ,target:1";
+        }
+        else if(no<=30 & no>=27){
+            greeting=" cp:1 , trestbps:135 , chol:204, fbs:0 , restecg:0 , thalach:202 , exang:0 , oldpeak:0 , slope:2 , ca:0 , thal:2 ,target:1";
+        }
+        
+        
+        else if(no<=26 ){
+            greeting=" cp:0 , trestbps:125 , chol:212, fbs:0 , restecg:1 , thalach:168 , exang:0 , oldpeak:1 , slope:2 , ca:2 , thal:3 ,target:0";
+        }
+        document.getElementById("demo").innerHTML = greeting;
+       
+        }
+    </script>
+</body>
+</html>
